@@ -4,11 +4,7 @@ import { FooterStyle } from "./Footer.style";
 import Image from "next/image";
 import Tape from "./Tape";
 
-type Props = {
-  image: string;
-};
-
-const Footer = ({ image }: Props) => {
+const Footer = () => {
   return (
     <FooterStyle>
       <div className='footer-container contained'>
