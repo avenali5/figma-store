@@ -1,0 +1,57 @@
+@import "./variables.css";
+@font-face {
+  font-family: "Whyte-Light";
+  src: url("../../public/assets/fonts/Whyte-Light.ttf");
+}
+@font-face {
+  font-family: "Whyte-Book";
+  src: url("../../public/assets/fonts/Whyte-Book.ttf");
+}
+@font-face {
+  font-family: "Whyte-Regular";
+  src: url("../../public/assets/fonts/Whyte-Regular.ttf");
+}
+@font-face {
+  font-family: "Whyte-Bold";
+  src: url("../../public/assets/fonts/Whyte-Bold.ttf");
+}
+@font-face {
+  font-family: "Whyte-Heavy";
+  src: url("../../public/assets/fonts/Whyte-Heavy.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Whyte-Book";
+}
+body {
+  /* background: var(--yellow); */
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.max-width {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  position: relative;
+}
+.underline {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
