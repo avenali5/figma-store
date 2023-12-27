@@ -9,8 +9,4 @@ export const ItemsStyle = styled.div`
   hr {
     border-bottom: 3px solid var(--black);
   }
-
-  .single-item:first-child {
-    border-top: 1px solid var(--black) !important;
-  }
 `;

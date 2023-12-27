@@ -40,7 +40,7 @@ const page = () => {
       <div className='max-width'>
         {/* @ts-ignore */}
         <Items products={products} setProducts={setProducts} />
-        {/* {products.length > 0 ? <Checkout total={total} /> : <NoItems />} */}
+        {products.length > 0 ? <Checkout total={total} /> : <NoItems />}
       </div>
     </main>
   );

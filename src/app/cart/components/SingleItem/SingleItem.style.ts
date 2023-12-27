@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const SingleItemStyle = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  width: 100%;
   .labels {
     grid-column: span 2;
     h3:not(:first-child) {
@@ -47,6 +48,7 @@ export const SingleItemStyle = styled.div`
         grid-row: initial;
         margin-left: auto;
         font-size: 2rem;
+        cursor: pointer;
       }
       img {
         grid-row: 1 / span 1;
@@ -66,6 +68,7 @@ export const SingleItemStyle = styled.div`
     .quantity-wrap {
       display: flex;
       align-items: center;
+      gap: 1rem;
       grid-column-start: 1;
       grid-row-start: 2;
       button {
@@ -78,6 +81,7 @@ export const SingleItemStyle = styled.div`
 
   @media (min-width: 1000px) {
     grid-template-columns: 1fr 1fr;
+    font-size: 1.4rem;
     .labels {
       grid-column-gap: 80px;
       -webkit-column-gap: 80px;

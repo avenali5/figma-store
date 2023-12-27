@@ -5,6 +5,8 @@ export const CheckoutStyle = styled.div`
   justify-content: space-between;
   gap: 3rem;
   padding: 0 1rem 2rem;
+  grid-column: 1 / 3;
+  border-top: 1px solid var(--black);
   img {
     width: 40%;
     max-width: 13rem;
@@ -13,8 +15,9 @@ export const CheckoutStyle = styled.div`
   .right {
     display: flex;
     flex-direction: column;
-    /* align-items: end; */
     gap: 1rem;
+    padding-top: 2rem;
+    max-width: 20rem;
     button {
       width: fit-content;
     }

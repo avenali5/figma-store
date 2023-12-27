@@ -24,7 +24,7 @@ const Checkout = ({ total }: Props) => {
   };
 
   return (
-    <CheckoutStyle>
+    <CheckoutStyle className='checkout'>
       <Image
         src='/assets/images/nice_checkout.svg'
         alt=''
@@ -38,7 +38,7 @@ const Checkout = ({ total }: Props) => {
         </div>
         <div className='shipping'>
           <h3>Total*</h3>
-          <span className='price'>${total}</span>
+          <span className='price'>${total}.00</span>
         </div>
         <div className='update-cart'>
           <button>UPDATE CART</button>

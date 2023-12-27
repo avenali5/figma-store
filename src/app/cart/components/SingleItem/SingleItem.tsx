@@ -4,20 +4,19 @@ import React, { Dispatch, SetStateAction, useState } from "react";
 import { SingleItemStyle } from "./SingleItem.style";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Button from "@/components/Button/Button";
+import Checkout from "../Checkout/Checkout";
 
 type Props = {
-  product: ProductType;
   products: ProductType[];
   setProducts: Dispatch<SetStateAction<never[]>>;
 };
 
-const SingleItem = ({ product, products, setProducts }: Props) => {
-  // @ts-expect-error
+const SingleItem = ({ products, setProducts }: Props) => {
   // const [quantity, setQuantity] = useState(product.quantity);
 
-  const removeProduct = () => {
+  const removeProduct = (prod: ProductType) => {
     // @ts-expect-error
-    setProducts(products.filter(el => el._id !== product._id));
+    setProducts(products.filter(el => el._id !== prod._id));
     console.log(products);
   };
 
@@ -34,7 +33,7 @@ const SingleItem = ({ product, products, setProducts }: Props) => {
           <div className='item-details'>
             <Icon
               icon='carbon:close-outline'
-              onClick={removeProduct}
+              onClick={() => removeProduct(product)}
               className='item-remove'
             />
             {/* @ts-ignore */}
@@ -44,26 +43,22 @@ const SingleItem = ({ product, products, setProducts }: Props) => {
             <div className='options-mobile'>mob</div>
           </div>
           {/* @ts-ignore */}
-          <span className='individual-price'>${product.price}</span>
+          <span className='individual-price'>${product.price}.00</span>
           <div className='quantity-wrap'>
             <Button onClick={() => {}} type='outline'>
               -
             </Button>
-            <span>quant</span>
+            <span>{product.quantity}</span>
             <Button onClick={() => {}} type='outline'>
               +
             </Button>
           </div>
-          <span className='line-price'>$4.00</span>
+          <span className='line-price'>
+            ${product.quantity * Number(product.price)}.00
+          </span>
         </div>
       ))}
-      <Image
-        src='/assets/images/nice_checkout.svg'
-        alt=''
-        width={50}
-        height={50}
-      />
-      <div className='totals'>totals</div>
+      <Checkout total={30} />
     </SingleItemStyle>
   );
 };

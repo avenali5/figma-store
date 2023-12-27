@@ -14,7 +14,6 @@ const Items = ({ products, setProducts }: Props) => {
     <ItemsStyle>
       <h3>{products.length} items in Cart</h3>
       <hr />
-      {products.length > 0 && <h4>Item</h4>}
       {/* {products?.map((prod: any, i: number) => ( */}
       <SingleItem
         // product={prod}
