@@ -36,8 +36,6 @@ export const CheckoutStyle = styled.div`
     .solid {
       align-self: end;
     }
-    .update-cart {
-    }
     .info {
       display: flex;
       flex-direction: column;
@@ -54,6 +52,10 @@ export const CheckoutStyle = styled.div`
         }
         label {
           /* font-size: 0.8rem; */
+          user-select: none;
+          &.error {
+            color: red;
+          }
         }
       }
     }

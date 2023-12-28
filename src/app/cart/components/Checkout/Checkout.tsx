@@ -11,16 +11,30 @@ type Props = {
 
 const Checkout = ({ total }: Props) => {
   const router = useRouter();
+  const [privacyError, setPrivacyError] = useState(false);
+  const [termsError, setTermsError] = useState(false);
   const [checks, setChecks] = useState({
     terms: false,
     privacy: false,
   });
 
   const handleCheckout = () => {
-    if (checks.privacy && checks.terms) {
-      router.push("/checkout");
-    } else {
+    if (!checks.privacy) {
+      setPrivacyError(true);
     }
+    if (!checks.terms) {
+      setTermsError(true);
+    }
+    if (checks.privacy && checks.terms) {
+      // router.push("/checkout");
+    } else {
+      console.log("first");
+    }
+  };
+
+  const handleChange = (e: any) => {
+    // @ts-ignore
+    setChecks({ ...checks, [e.target.name]: !checks[e.target.name] });
   };
 
   return (
@@ -40,9 +54,6 @@ const Checkout = ({ total }: Props) => {
           <h3>Total*</h3>
           <span className='price'>${total}.00</span>
         </div>
-        <div className='update-cart'>
-          <button>UPDATE CART</button>
-        </div>
         <Button type='solid' onClick={handleCheckout}>
           CHECKOUT
         </Button>
@@ -56,8 +67,12 @@ const Checkout = ({ total }: Props) => {
               name='terms'
               id='terms'
               checked={checks.terms}
+              onChange={handleChange}
             />
-            <label htmlFor='terms'>
+            <label
+              htmlFor='terms'
+              className={termsError && !checks.terms ? "error" : ""}
+            >
               By ticking this box, you confirm your agreement to our Figma{" "}
               <span className='underline'>Store Terms of Sale</span>
             </label>
@@ -68,8 +83,12 @@ const Checkout = ({ total }: Props) => {
               name='privacy'
               id='privacy'
               checked={checks.privacy}
+              onChange={handleChange}
             />
-            <label htmlFor='privacy'>
+            <label
+              htmlFor='privacy'
+              className={privacyError && !checks.privacy ? "error" : ""}
+            >
               By ticking this box, you agree to our{" "}
               <span className='underline'>Privacy Policy</span>
             </label>

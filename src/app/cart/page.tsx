@@ -2,9 +2,7 @@
 import Header from "@/components/Header/Header";
 import React, { useEffect, useState } from "react";
 import Items from "./components/Items/Items";
-import Checkout from "./components/Checkout/Checkout";
 import { ProductType } from "@/types";
-import NoItems from "./components/NoItems/NoItems";
 
 const page = () => {
   const [products, setProducts] = useState<ProductType[]>([]);
@@ -18,10 +16,14 @@ const page = () => {
   }, []);
 
   useEffect(() => {
+    if (products.length > 0) {
+      localStorage.setItem("products", JSON.stringify(products));
+    }
+  }, [products]);
+
+  useEffect(() => {
     if (products) {
       let totalQuantity = 0;
-
-      // Loop through the array and sum the quantity property
       for (let i = 0; i < products.length; i++) {
         /* @ts-ignore */
         totalQuantity += products[i].quantity;
@@ -40,7 +42,7 @@ const page = () => {
       <div className='max-width'>
         {/* @ts-ignore */}
         <Items products={products} setProducts={setProducts} />
-        {products.length > 0 ? <Checkout total={total} /> : <NoItems />}
+        {/* {products.length > 0 ? <Checkout total={total} /> : <NoItems />} */}
       </div>
     </main>
   );

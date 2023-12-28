@@ -18,7 +18,7 @@ const Hero = () => {
     <HeroStyle>
       <div className='embla' ref={emblaRef}>
         <div className='embla__container'>
-          {slides.map((slide, i) => (
+          {slides.map((slide: any, i) => (
             <div className='embla__slide' key={i}>
               <Link href='/'>
                 <Image
@@ -27,8 +27,6 @@ const Hero = () => {
                   width='0'
                   height='0'
                   sizes='100vw'
-                  // width={slide.width}
-                  // height={slide.height}
                   style={slide.style}
                 />
                 <span className='description'>{slide.description}</span>
