@@ -24,7 +24,7 @@ const Item = ({ product, products, setProducts }: Props) => {
           onClick={() => removeProduct(product)}
           className='item-remove'
         />
-        <Image src={product?.main_image} alt='' width={200} height={200} />
+        <img src={product?.main_image} alt='' width={200} height={200} />
         <h3>{product.product_name}</h3>
       </div>
       <span className='individual-price'>${product.price}.00</span>
