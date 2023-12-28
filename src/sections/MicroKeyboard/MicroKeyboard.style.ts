@@ -32,6 +32,7 @@ export const MicroKeyboardStyle = styled.section`
       display: -ms-flexbox;
       display: flex;
       -ms-flex-direction: column;
+      align-items: center;
       flex-direction: column;
       gap: 20px;
       padding: 70px 50px 7rem;

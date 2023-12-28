@@ -24,21 +24,21 @@ const Product = ({ product }: Props) => {
         }}
       >
         <div className='images-wrapper'>
-          <Image
+          <img
             src={product.pattern_image}
             className='pattern'
             alt=''
             width={900}
             height={900}
           />
-          <Image
+          <img
             src={product.product_image}
             className='single-item'
             alt=''
             width={300}
             height={300}
           />
-          <Image
+          <img
             src={product.main_image}
             alt=''
             className='main-pic'

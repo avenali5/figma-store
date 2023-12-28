@@ -4,7 +4,7 @@ export const HeroStyle = styled.section`
   background: var(--yellow);
   /* padding: 1rem; */
   position: relative;
-  padding-top: 2rem;
+  padding-top: 4rem;
   border-bottom: 4px solid var(--black);
   /* height: 30vh !important; */
   .embla {
@@ -65,7 +65,6 @@ export const HeroStyle = styled.section`
   }
 
   @media (min-width: 1100px) {
-    padding-top: 4rem;
     .embla {
       min-height: 40rem;
     }

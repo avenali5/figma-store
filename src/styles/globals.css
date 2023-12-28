@@ -55,3 +55,9 @@ button {
 ul {
   list-style-type: none;
 }
+
+@media (max-width: 480px) {
+  * {
+    line-height: 2;
+  }
+}
