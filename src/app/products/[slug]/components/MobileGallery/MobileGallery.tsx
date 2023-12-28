@@ -12,7 +12,7 @@ const MobileGallery = ({ product }: ProductType) => {
         <div className='embla__container'>
           {product?.gallery?.reverse().map((slide, i) => (
             <div className='embla__slide' key={i}>
-              <Image
+              <img
                 src={slide}
                 alt=''
                 width={300}

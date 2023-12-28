@@ -28,13 +28,13 @@ const DesktopGallery = ({ gallery }: { gallery: string[] }) => {
             key={i}
             onClick={() => handleImage(slide, i)}
           >
-            <Image src={slide} alt='' width={300} height={400} />
+            <img src={slide} alt='' width={300} height={400} />
           </button>
         ))}
       </div>
       <div className='image-display'>
         {/* {!imageLoaded && <div className='loader' />} */}
-        <Image
+        <img
           src={imageFeatured}
           className={!imageLoaded ? "loading" : ""}
           alt=''
