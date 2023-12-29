@@ -2,17 +2,22 @@
 @font-face {
   font-family: "Whyte-Light";
   src: url("../../public/assets/fonts/Whyte-Light.ttf");
+  ascent-override: 92%; /* play with values */
+  /* descent-override: 10%;  */
 }
 @font-face {
   font-family: "Whyte-Book";
   src: url("../../public/assets/fonts/Whyte-Book.ttf");
+  ascent-override: 92%; /* play with values */
 }
 @font-face {
   font-family: "Whyte-Regular";
   src: url("../../public/assets/fonts/Whyte-Regular.ttf");
+  ascent-override: 92%; /* play with values */
 }
 @font-face {
   font-family: "Whyte-Bold";
+  ascent-override: 92%; /* play with values */
   src: url("../../public/assets/fonts/Whyte-Bold.ttf");
 }
 @font-face {
