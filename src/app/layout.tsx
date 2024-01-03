@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 import StyledComponentsRegistry from "./registry";
 import { QueryClient, QueryClientProvider, Hydrate } from "react-query";
-import React from "react";
+import React, { useEffect } from "react";
 // import { ReactQueryDevtools } from "react-query/devtools";
 // import { Hydrate as SWRHydrate } from "swr";
 
@@ -30,6 +30,16 @@ export default function RootLayout({
   if (!queryClientRef.current) {
     queryClientRef.current = new QueryClient();
   }
+
+  useEffect(() => {
+    let link: any = document.querySelector("link[rel~='icon']");
+    if (!link) {
+      link = document.createElement("link");
+      link.rel = "icon";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    }
+    link.href = "/assets/favicon.svg";
+  }, []);
 
   return (
     <html lang='en'>

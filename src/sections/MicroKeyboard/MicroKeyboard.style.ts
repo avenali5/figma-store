@@ -72,6 +72,7 @@ export const MicroKeyboardStyle = styled.section`
         }
         button {
           width: fit-content;
+          align-self: flex-start;
         }
       }
       img {

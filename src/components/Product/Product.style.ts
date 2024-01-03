@@ -20,6 +20,15 @@ export const ProductStyle = styled.div`
       left: 0;
       height: 100%;
     }
+    .loader {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: lightgray;
+      z-index: 2;
+    }
   }
   .text-wrapper {
     display: flex;

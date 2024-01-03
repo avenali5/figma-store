@@ -70,8 +70,14 @@ const Header = () => {
       <div className={`${isSearch ? "is-search" : ""} header-wrapper`}>
         <div className={`menu-wrapper ${isMenu ? "open" : ""}`}>
           <div className='content'>
-            <h3>Shop</h3>
-            <h3>About</h3>
+            <Link href='/#shop' onClick={() => setIsMenu(!isMenu)}>
+              <h3>Shop</h3>
+            </Link>
+
+            <Link href='/about'>
+              <h3>About</h3>
+            </Link>
+
             <ul>
               <li>Privacy Policy</li>
               <li>Terms of Sale</li>
@@ -83,7 +89,7 @@ const Header = () => {
           <Button type='outline' onClick={() => router.push("/#shop")}>
             SHOP
           </Button>
-          <Button type='outline' onClick={() => {}}>
+          <Button type='outline' onClick={() => router.push("/about")}>
             ABOUT
           </Button>
           <button

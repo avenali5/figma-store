@@ -61,8 +61,8 @@ ul {
   list-style-type: none;
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   * {
     line-height: 1;
   }
-}
+} */

@@ -58,7 +58,7 @@ export const HeroStyle = styled.section`
   .min-width {
     height: 100%;
   }
-  .donation-badge {
+  .max-width div {
     transform: scale(0.7) translateY(50%);
     transform-origin: bottom right;
     right: 1rem;
@@ -81,7 +81,7 @@ export const HeroStyle = styled.section`
         width: 100% !important;
       }
     }
-    .donation-badge {
+    .max-width div {
       transform: scale(1) translateY(50%);
     }
   }

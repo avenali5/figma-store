@@ -4,7 +4,7 @@ export const DonationBadgeStyle = styled.div`
   position: absolute;
   right: 0;
   bottom: 0;
-  transform: translateY(50%);
+  /* transform: translateY(50%); */
   z-index: 1;
 
   g {

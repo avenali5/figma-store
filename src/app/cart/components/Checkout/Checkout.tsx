@@ -4,13 +4,14 @@ import { CheckoutStyle } from "./Checkout.style";
 import Image from "next/image";
 import Button from "@/components/Button/Button";
 import { useRouter } from "next/navigation";
+import Modal from "@/components/Modal/Modal";
 
 type Props = {
   total: number;
 };
 
 const Checkout = ({ total }: Props) => {
-  const router = useRouter();
+  const [isModal, setIsModal] = useState(false);
   const [privacyError, setPrivacyError] = useState(false);
   const [termsError, setTermsError] = useState(false);
   const [checks, setChecks] = useState({
@@ -26,9 +27,7 @@ const Checkout = ({ total }: Props) => {
       setTermsError(true);
     }
     if (checks.privacy && checks.terms) {
-      // router.push("/checkout");
-    } else {
-      console.log("first");
+      setIsModal(true);
     }
   };
 
@@ -101,6 +100,17 @@ const Checkout = ({ total }: Props) => {
           </div>
         </div>
       </div>
+      {isModal && (
+        <Modal onClose={() => setIsModal(false)}>
+          <div>
+            <h3>This projects ends here!</h3>
+            <p>
+              The checkout is under construction yet. Stay tuned for future
+              updates.
+            </p>
+          </div>
+        </Modal>
+      )}
     </CheckoutStyle>
   );
 };

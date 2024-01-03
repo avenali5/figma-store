@@ -26,6 +26,12 @@ const page = ({ searchParams }: { searchParams: SearchTermType }) => {
     }
   );
 
+  useEffect(() => {
+    document.title = `Search: ${products?.length} result${
+      products?.length > 1 || products?.length === 0 ? "s" : ""
+    } found for "${term}"`;
+  }, [term, products]);
+
   return (
     <div>
       <Header />

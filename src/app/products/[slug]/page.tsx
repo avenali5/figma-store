@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import ProductLayout from "./components/ProductLayout/ProductLayout";
 import { useQuery } from "react-query";
 import { getProductById } from "@/services/products";
+import Footer from "@/sections/Footer/Footer";
 
 const ProductPage = ({ searchParams }: { searchParams: { id: string } }) => {
   const productId = searchParams.id;
@@ -20,6 +21,7 @@ const ProductPage = ({ searchParams }: { searchParams: { id: string } }) => {
     <main>
       <Header />
       <ProductLayout product={product} isLoading={isLoading} />
+      <Footer />
     </main>
   );
 };

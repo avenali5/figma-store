@@ -84,7 +84,7 @@ export const HeaderStyle = styled.header`
         }
       }
     }
-    a {
+    > a {
       h3 {
         font-family: "Whyte-Bold";
         letter-spacing: 0.567px;

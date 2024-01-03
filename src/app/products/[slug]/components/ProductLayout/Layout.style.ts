@@ -9,7 +9,7 @@ export const LayoutStyle = styled.section`
   grid-template-columns: 3fr 2fr;
   grid-template-rows: repeat(3, auto) 1fr;
   grid-template-columns: 100%;
-  padding-top: 7rem;
+  padding: 7rem 0;
   .tag {
     background-color: var(--green);
     border-radius: 20px;

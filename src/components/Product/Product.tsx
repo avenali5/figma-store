@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { ProductStyle } from "./Product.style";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,10 +8,15 @@ type Props = {
 };
 
 const Product = ({ product }: Props) => {
+  const [loading, setLoading] = useState(true);
   const hashedName = product.product_name
     .toLowerCase()
     .trim()
     .replace(/[\s_-]+/g, "-");
+
+  const handleImgLoad = () => {
+    setLoading(false);
+  };
 
   return (
     <ProductStyle className={`${product.type} product`}>
@@ -38,12 +43,14 @@ const Product = ({ product }: Props) => {
             width={300}
             height={300}
           />
+          {loading && <div className='loader' />}
           <img
             src={product.main_image}
             alt=''
             className='main-pic'
             width={300}
             height={300}
+            onLoad={handleImgLoad}
           />
         </div>
         <div className='text-wrapper'>

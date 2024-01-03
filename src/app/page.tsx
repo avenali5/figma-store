@@ -6,7 +6,7 @@ import Hero from "@/sections/Hero/Hero";
 import MicroKeyboard from "@/sections/MicroKeyboard/MicroKeyboard";
 import Products from "@/sections/Products/Products";
 import { getAllProducts } from "@/services/products";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 
 export default function Home() {
@@ -19,6 +19,10 @@ export default function Home() {
       enabled: true,
     }
   );
+
+  useEffect(() => {
+    document.title = "The Figma Store | by Alejo Avenali";
+  }, []);
 
   return (
     <main>
