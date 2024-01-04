@@ -79,6 +79,7 @@ export const HeroStyle = styled.section`
       }
       img {
         width: 100% !important;
+        height: 100%;
       }
     }
     .max-width div {

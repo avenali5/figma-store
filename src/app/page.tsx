@@ -8,6 +8,17 @@ import Products from "@/sections/Products/Products";
 import { getAllProducts } from "@/services/products";
 import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
+import DocumentMeta from "react-document-meta";
+
+const meta = {
+  description: "I am a description, and I can create multiple tags",
+  meta: {
+    charset: "utf-8",
+    name: {
+      keywords: "react,meta,document,html,tags",
+    },
+  },
+};
 
 export default function Home() {
   const [type, setType] = useState("");
@@ -26,6 +37,7 @@ export default function Home() {
 
   return (
     <main>
+      <DocumentMeta {...meta} />
       <Header />
       <Hero />
       <Collection setType={setType} />

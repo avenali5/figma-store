@@ -89,7 +89,10 @@ const Header = () => {
           <Button type='outline' onClick={() => router.push("/#shop")}>
             SHOP
           </Button>
-          <Button type='outline' onClick={() => router.push("/about")}>
+          <Button
+            type={pathname.includes("about") ? "solid" : "outline"}
+            onClick={() => router.push("/about")}
+          >
             ABOUT
           </Button>
           <button
@@ -102,6 +105,7 @@ const Header = () => {
             <span></span>
           </button>
           <button
+            aria-label='Search'
             className='search-button'
             onClick={() => setIsSearch(!isSearch)}
           >
@@ -113,15 +117,13 @@ const Header = () => {
         </Link>
         <div className='right'>
           <div className='location'>
-            <select name='' id=''>
-              <option value=''>CANADA</option>
-              <option value=''>JAPAN</option>
-              <option value=''>UNITED KINGDOM</option>
-              <option value='' selected>
-                UNITED STATES
-              </option>
-              <option value=''>EUROPEAN UNION</option>
-              <option value=''>I'M JUST BROWSING</option>
+            <select name='' id='' aria-label='Country' defaultValue='usa'>
+              <option value='can'>CANADA</option>
+              <option value='jap'>JAPAN</option>
+              <option value='uk'>UNITED KINGDOM</option>
+              <option value='usa'>UNITED STATES</option>
+              <option value='eu'>EUROPEAN UNION</option>
+              <option value='browsing'>I'M JUST BROWSING</option>
             </select>
             <Icon icon='mdi:location-outline' className='select-icon marker' />
             <Icon icon='mdi:chevron-down' className='select-icon chevron' />

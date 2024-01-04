@@ -1,8 +1,7 @@
 "use client";
 import Header from "@/components/Header/Header";
 import Products from "@/sections/Products/Products";
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Term from "./components/Term/Term";
 import { useRouter } from "next/navigation";
 import { SearchTermType } from "@/types";

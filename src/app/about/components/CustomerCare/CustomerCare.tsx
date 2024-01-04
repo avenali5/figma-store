@@ -10,7 +10,10 @@ const CustomerCare = () => {
         </div>
         <div className='faqs'>
           <div className='faq'>
-            <h3>Shipping</h3>
+            <h3>
+              {" "}
+              <img src='/assets/icons/about7.png' alt='' /> Shipping
+            </h3>
             <p>
               Once you’ve made a purchase, an e-mail confirmation will be sent
               to the e-mail address you provided. This e-mail acts as an invoice
@@ -31,7 +34,10 @@ const CustomerCare = () => {
             </p>
           </div>
           <div className='faq'>
-            <h3>Returns</h3>
+            <h3>
+              {" "}
+              <img src='/assets/icons/about8.png' alt='' /> Returns
+            </h3>
             <p>
               We currently do not accept returns and are unable to edit your
               order once placed. If you would like to cancel your order and
@@ -40,7 +46,10 @@ const CustomerCare = () => {
             </p>
           </div>
           <div className='faq'>
-            <h3>Contact Us</h3>
+            <h3>
+              {" "}
+              <img src='/assets/icons/about9.png' alt='' /> Contact Us
+            </h3>
             <p>You can contact support by emailing thefigmastore@figma.com.</p>
           </div>
         </div>

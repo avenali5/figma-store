@@ -10,13 +10,17 @@ export const FaqStyle = styled.section`
   }
   .faq {
     margin: 3rem 0;
+
     h3 {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 1rem;
       margin: 0.5rem 0;
       font-size: clamp(1.3rem, 4vw, 1.6rem);
       font-family: "Whyte-Bold";
+      img {
+        width: 1.5rem;
+      }
     }
     p {
       font-size: clamp(1.2rem, 1vw, 1.7rem);
