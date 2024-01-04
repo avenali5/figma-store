@@ -8,6 +8,7 @@ import Products from "@/sections/Products/Products";
 import { getAllProducts } from "@/services/products";
 import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
+// @ts-ignore
 import DocumentMeta from "react-document-meta";
 
 const meta = {
