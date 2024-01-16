@@ -1,4 +1,1 @@
-cosas que mejore:
-
-- no results en search
-- fixed label checkbox in checkout
+Replica of the original Figma Store, for which I developed the entire API with Node, Express and MongoDB, and the frontend with Next and Typescript. Includes several micro-interactions and five fully functional subpages.
